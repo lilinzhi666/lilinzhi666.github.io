@@ -1,0 +1,1286 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="权限管理系统3, lilinzhi">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>权限管理系统3 | lilinzhi</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="lilinzhi" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">lilinzhi</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/music" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>music</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">lilinzhi</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/music" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			music
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">权限管理系统3</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-08-20
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="26-角色管理-设置角色权限"><a href="#26-角色管理-设置角色权限" class="headerlink" title="26 角色管理-设置角色权限"></a>26 角色管理-设置角色权限</h2><p>主要对角色设置对应的权限</p>
+<p>弹出页面的效果</p>
+<p><img src="https://itfxq-1301816068.cos.ap-chengdu.myqcloud.com/1e62127b-ccc3-4202-9621-63fa4fd1028e.png" alt="Description"></p>
+<p>form表单</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 设定角色start--&gt;</span><br><span class="line">                           &lt;div class=&quot;modal fade&quot; id=&quot;setRolePermissionModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot;&gt;</span><br><span class="line">                               &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;</span><br><span class="line">                                   &lt;div class=&quot;modal-content&quot;&gt;</span><br><span class="line">                                       &lt;div class=&quot;modal-header&quot;&gt;</span><br><span class="line">                                           &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;</span><br><span class="line">                                           &lt;h4 class=&quot;modal-title&quot; &gt;添加角色对应的权限&lt;/h4&gt;</span><br><span class="line">                                       &lt;/div&gt;</span><br><span class="line">                                       &lt;form id=&quot;addRolePermissionForm&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br><span class="line">                                           &lt;div class=&quot;modal-body&quot;&gt;</span><br><span class="line">                                               &lt;input type=&quot;hidden&quot; id=&quot;addRolePermision_roleId&quot; class=&quot;form-control&quot; name=&quot;id&quot;&gt;</span><br><span class="line">                                               &lt;div class=&quot;form-group&quot;&gt;</span><br><span class="line">                                                   &lt;label  class=&quot;control-label&quot;&gt;角色名称：&lt;/label&gt;</span><br><span class="line">                                                   &lt;input type=&quot;text&quot; id=&quot;addRolePermision_name&quot; class=&quot;form-control&quot; name=&quot;name&quot;&gt;</span><br><span class="line">                                               &lt;/div&gt;</span><br><span class="line">                                               &lt;!-- 角色列表--&gt;</span><br><span class="line">                                               &lt;div class=&quot;form-group row&quot;&gt;</span><br><span class="line">                                                   &lt;div class=&quot;col-xs-12&quot;&gt;</span><br><span class="line">                                                       &lt;label  class=&quot;control-label&quot;&gt;选择权限：&lt;/label&gt;</span><br><span class="line">                                                   &lt;/div&gt;</span><br><span class="line">                                                   &lt;div class=&quot;col-xs-12&quot;&gt;</span><br><span class="line">                                                       &lt;label th:each=&quot;permisison : $&#123;permissions&#125;&quot; style=&quot;margin-right: 10px&quot;&gt;</span><br><span class="line">                                                           &lt;input th:id=&quot;&#x27;pid_&#x27;+$&#123;permisison.id&#125;&quot; name=&quot;permissions[]&quot; type=&quot;checkbox&quot; class=&quot;checkbox-child&quot;  th:value=&quot;$&#123;permisison.id&#125;&quot;&gt;</span><br><span class="line">                                                           &lt;span th:text=&quot;$&#123;permisison.title&#125;&quot;&gt;&lt;/span&gt;</span><br><span class="line">                                                       &lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                                                   &lt;/div&gt;</span><br><span class="line">                                               &lt;/div&gt;</span><br><span class="line">                                           &lt;/div&gt;</span><br><span class="line">                                           &lt;div class=&quot;modal-footer&quot;&gt;</span><br><span class="line">                                               &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;关闭&lt;/button&gt;</span><br><span class="line">                                               &lt;button type=&quot;button&quot; data-method=&#x27;addRolePermissionSave&#x27; class=&quot;btn btn-primary&quot;&gt;保存&lt;/button&gt;</span><br><span class="line">                                           &lt;/div&gt;</span><br><span class="line">                                       &lt;/form&gt;</span><br><span class="line">                                   &lt;/div&gt;</span><br><span class="line">                               &lt;/div&gt;</span><br><span class="line">                           &lt;/div&gt;</span><br><span class="line">                           &lt;!-- 设定角色end--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>保存操作：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">addRolePermissionSave:function()&#123;</span><br><span class="line">               //添加角色的权限</span><br><span class="line">               var addRolePermissionParamObj =  $(&quot;#addRolePermissionForm&quot;).serializeObject();</span><br><span class="line">               console.log(addRolePermissionParamObj);</span><br><span class="line">               /**</span><br><span class="line">                * &#123;</span><br><span class="line">                * id: &quot;18&quot;</span><br><span class="line">                  permissionId:[1,2]</span><br><span class="line">                  &#125;</span><br><span class="line">                */</span><br><span class="line">               var paramObj =  &#123;&quot;roleId&quot;:addRolePermissionParamObj.id,&quot;permissionIds&quot;:addRolePermissionParamObj.permissions&#125;;</span><br><span class="line">               $.ajax(&#123;</span><br><span class="line">                   type: &quot;post&quot;,</span><br><span class="line">                   url: &quot;/role/addRolePermission&quot;,</span><br><span class="line">                   dataType : &quot;json&quot;,</span><br><span class="line">                   data: JSON.stringify(paramObj),</span><br><span class="line">                   contentType:&#x27;application/json;charset=utf-8&#x27;,</span><br><span class="line">                   success: function (data) &#123;</span><br><span class="line">                       if (data.isSuccess) &#123;</span><br><span class="line">                           $.confirm(&#123;</span><br><span class="line">                               title: &#x27;温馨提示&#x27;,</span><br><span class="line">                               content: &#x27;保存成功&#x27;,</span><br><span class="line">                               type: &#x27;green&#x27;,</span><br><span class="line">                               buttons: &#123;</span><br><span class="line">                                   omg: &#123;</span><br><span class="line">                                       text: &#x27;谢谢&#x27;,</span><br><span class="line">                                       btnClass: &#x27;btn-green&#x27;,</span><br><span class="line">                                       action:function()&#123;</span><br><span class="line">                                           $(&#x27;#setRolePermissionModal&#x27;).modal(&#x27;hide&#x27;);</span><br><span class="line">                                           $(&#x27;#roleTable&#x27;).bootstrapTable(&#x27;refresh&#x27;);</span><br><span class="line">                                       &#125;</span><br><span class="line">                                   &#125;</span><br><span class="line">                               &#125;</span><br><span class="line">                           &#125;);</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;);</span><br><span class="line">           &#125;</span><br></pre></td></tr></table></figure>
+
+<p>后台代码:</p>
+<p>RoleController.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/role/addRolePermission&quot;)</span><br><span class="line">   @ResponseBody</span><br><span class="line">   public MzResult addRolePermission(@RequestBody Map paramMap)&#123;</span><br><span class="line">       MzResult mzResult = new MzResult();</span><br><span class="line">       String roleId = (String)paramMap.get(&quot;roleId&quot;);</span><br><span class="line">       List permissionIds = (List) paramMap.get(&quot;permissionIds&quot;);</span><br><span class="line">       try &#123;</span><br><span class="line">           //添加角色对应的权限</span><br><span class="line">           roleService.addRolePermission(roleId,permissionIds);</span><br><span class="line">           return mzResult;</span><br><span class="line">       &#125;catch (Exception e)&#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">           return new MzResult(&quot;保存权限失败&quot;);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>RoleServiceImpl.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">   @Transactional</span><br><span class="line">   public void addRolePermission(String roleId, List permissionIds) &#123;</span><br><span class="line"></span><br><span class="line">       List rolePermissionList = new ArrayList();</span><br><span class="line">       for (Object permissionId : permissionIds) &#123;</span><br><span class="line">           Map mp = new HashMap();</span><br><span class="line">           mp.put(&quot;roleId&quot;,roleId);</span><br><span class="line">           mp.put(&quot;permissionId&quot;,permissionId);</span><br><span class="line">           rolePermissionList.add(mp);</span><br><span class="line">       &#125;</span><br><span class="line">       //先删除角色对应的权限</span><br><span class="line">       roleMapper.deleteRolePermission(Long.parseLong(roleId));</span><br><span class="line">       //添加角色对应的权限</span><br><span class="line">       roleMapper.addRolePermission(rolePermissionList);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>RoleMapper.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Delete(&quot;delete from t_role_permission  where roleid = #&#123;roleid&#125;&quot;)</span><br><span class="line"> void deleteRolePermission(long parseLong);</span><br><span class="line"></span><br><span class="line"> //添加角色对应的权限</span><br><span class="line"> void addRolePermission(List rolePermissionList);</span><br></pre></td></tr></table></figure>
+
+<p>RoleMapper.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 添加角色的权限--&gt;</span><br><span class="line">	&lt;insert id=&quot;addRolePermission&quot; parameterType=&quot;java.util.List&quot;&gt;</span><br><span class="line">		insert into t_role_permission(roleid,permissionid)</span><br><span class="line">		values</span><br><span class="line">		&lt;foreach collection=&quot;list&quot; item=&quot;item&quot; separator=&quot;,&quot;&gt;</span><br><span class="line">			(#&#123;item.roleId&#125;,#&#123;item.permissionId&#125;)</span><br><span class="line">		&lt;/foreach&gt;</span><br><span class="line">	&lt;/insert&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 删除中间表权限--&gt;</span><br><span class="line">	&lt;delete id=&quot;deleteRolePermission&quot; parameterType=&quot;java.lang.Long&quot;&gt;</span><br><span class="line">		delete from t_role_permission  where roleid = #&#123;roleid&#125;</span><br><span class="line">	&lt;/delete&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="27-角色管理-删除角色"><a href="#27-角色管理-删除角色" class="headerlink" title="27 角色管理-删除角色"></a>27 角色管理-删除角色</h2><p>删除功能:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">   function del(id)&#123;</span><br><span class="line">        //发送ajax请求删除数据</span><br><span class="line">        $.get(&quot;/role/deleteRole&quot;,&#123;&quot;id&quot;:id&#125;,function(res)&#123;</span><br><span class="line">            if(res.isSuccess)&#123;</span><br><span class="line">                $.confirm(&#123;</span><br><span class="line">                    title: &#x27;温馨提示&#x27;,</span><br><span class="line">                    content: &#x27;删除角色成功&#x27;,</span><br><span class="line">                    type: &#x27;green&#x27;,</span><br><span class="line">                    buttons: &#123;</span><br><span class="line">                        omg: &#123;</span><br><span class="line">                            text: &#x27;谢谢&#x27;,</span><br><span class="line">                            btnClass: &#x27;btn-green&#x27;,</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">                $(&quot;#roleTable&quot;).bootstrapTable(&#x27;refresh&#x27;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">RoleController.java</span><br><span class="line">  //添加角色</span><br><span class="line">    @RequestMapping(&quot;/role/deleteRole&quot;)</span><br><span class="line">    @ResponseBody</span><br><span class="line">    public MzResult deleteRole(Long id)&#123;</span><br><span class="line">        System.out.println(&quot;删除角色....&quot;+id);</span><br><span class="line">        MzResult ajaxResult = new MzResult();</span><br><span class="line">        try &#123;</span><br><span class="line">            roleService.deleteRole(id);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            return new MzResult(&quot;删除失败&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        return ajaxResult;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">RoleServiceImpl.java</span><br><span class="line">  @Transactional</span><br><span class="line">    public void deleteRole(Long id) &#123;</span><br><span class="line">        roleMapper.deleteRole(id);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">RoleMapper.java</span><br><span class="line"> @Delete(&quot;delete from t_role where id=#&#123;id&#125;&quot;)</span><br><span class="line">    void deleteRole(Long id);</span><br></pre></td></tr></table></figure>
+
+<h2 id="28-角色管理-用户设定角色"><a href="#28-角色管理-用户设定角色" class="headerlink" title="28 角色管理-用户设定角色"></a>28 角色管理-用户设定角色</h2><p>我们从模板里面可以看出 在设定角色的时候，需要查询所有的角色出来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 角色列表--&gt;</span><br><span class="line">                                            &lt;div class=&quot;form-group row&quot;&gt;</span><br><span class="line">                                                &lt;div class=&quot;col-xs-12&quot;&gt;</span><br><span class="line">                                                    &lt;label for=&quot;recipient-name&quot; class=&quot;control-label&quot;&gt;选择权限：&lt;/label&gt;</span><br><span class="line">                                                &lt;/div&gt;</span><br><span class="line">                                                &lt;div class=&quot;col-xs-12&quot;&gt;</span><br><span class="line">                                                    &lt;label th:each=&quot;role : $&#123;roles&#125;&quot; style=&quot;margin-right: 10px&quot;&gt;</span><br><span class="line">                                                        &lt;input name=&quot;roles[]&quot; type=&quot;checkbox&quot; class=&quot;checkbox-child&quot; th:id=&quot;&#x27;rid_&#x27;+$&#123;role.id&#125;&quot;  th:value=&quot;$&#123;role.id&#125;&quot;&gt;</span><br><span class="line">                                                        &lt;span th:text=&quot;$&#123;role.name&#125;&quot;&gt;&lt;/span&gt;</span><br><span class="line">                                                    &lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                                                &lt;/div&gt;</span><br><span class="line">                                            &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>所以我们需要在 一进入页面的时候，就查询角色</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">UserController.java</span><br><span class="line"></span><br><span class="line">  @GetMapping(&quot;/index&quot;)</span><br><span class="line">    public String index(String menuid, Model model)&#123;</span><br><span class="line">        model.addAttribute(&quot;menuid&quot;,menuid);</span><br><span class="line">        List&lt;Role&gt; roles = roleService.queryAll();</span><br><span class="line">        model.addAttribute(&quot;roles&quot;,roles);</span><br><span class="line">        //用户首页</span><br><span class="line">        return &quot;views/user/user_list&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">UserMapper.java</span><br><span class="line">  @Select(&quot;select * from t_role&quot;)</span><br><span class="line">    List&lt;Role&gt; queryAll();</span><br></pre></td></tr></table></figure>
+
+<p>效果图：</p>
+<p><img src="https://itfxq-1301816068.cos.ap-chengdu.myqcloud.com/3146a4d2-d759-4c13-b58b-9dfbd7d0c494.png" alt="Description"></p>
+<p>保存用户角色:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">addUserRoleSave()&#123;</span><br><span class="line">                //保存用户的角色</span><br><span class="line">                var addRoleParamObj =  $(&quot;#addUserRoleForm&quot;).serializeObject();</span><br><span class="line">                console.log(addRoleParamObj);</span><br><span class="line">                /**</span><br><span class="line">                 * &#123;</span><br><span class="line">                 * id: &quot;18&quot;</span><br><span class="line">                   roles:[1,2]</span><br><span class="line">                   &#125;</span><br><span class="line">                 */</span><br><span class="line">                var paramObj =  &#123;&quot;userId&quot;:addRoleParamObj.id,&quot;roleIds&quot;:addRoleParamObj.roles&#125;;</span><br><span class="line">                $.ajax(&#123;</span><br><span class="line">                    type: &quot;post&quot;,</span><br><span class="line">                    url: &quot;/user/addUserRole&quot;,</span><br><span class="line">                    dataType : &quot;json&quot;,</span><br><span class="line">                    data: JSON.stringify(paramObj),</span><br><span class="line">                    contentType:&#x27;application/json;charset=utf-8&#x27;,</span><br><span class="line">                    success: function (data) &#123;</span><br><span class="line">                        if (data.isSuccess) &#123;</span><br><span class="line">                            $.confirm(&#123;</span><br><span class="line">                                title: &#x27;温馨提示&#x27;,</span><br><span class="line">                                content: &#x27;保存成功&#x27;,</span><br><span class="line">                                type: &#x27;green&#x27;,</span><br><span class="line">                                buttons: &#123;</span><br><span class="line">                                    omg: &#123;</span><br><span class="line">                                        text: &#x27;谢谢&#x27;,</span><br><span class="line">                                        btnClass: &#x27;btn-green&#x27;,</span><br><span class="line">                                        action:function()&#123;</span><br><span class="line">                                            $(&#x27;#addUserRoleModal&#x27;).modal(&#x27;hide&#x27;);</span><br><span class="line">                                            $(&#x27;#userTable&#x27;).bootstrapTable(&#x27;refresh&#x27;);</span><br><span class="line">                                        &#125;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+<p>后台java代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">UserController.java</span><br><span class="line">--------------------------------------------------------------------------------------</span><br><span class="line">@PostMapping(&quot;/addUserRole&quot;)</span><br><span class="line">    @ApiOperation(&quot;添加用户角色接口&quot;)</span><br><span class="line">    @ApiImplicitParams(&#123;</span><br><span class="line">            @ApiImplicitParam(name = &quot;paramMap&quot;, value = &quot;如:&#123;userId:1,[1,2,3,4]]&#125;&quot;)</span><br><span class="line">    &#125;)</span><br><span class="line">    @ResponseBody</span><br><span class="line">    public MzResult addUserRole(@RequestBody Map paramMap)&#123;</span><br><span class="line">        MzResult mzResult = new MzResult();</span><br><span class="line">        String userId = (String)paramMap.get(&quot;userId&quot;);</span><br><span class="line">        List roleIds = (List) paramMap.get(&quot;roleIds&quot;);</span><br><span class="line">        System.out.println(userId);</span><br><span class="line">        System.out.println(roleIds);</span><br><span class="line">        try &#123;</span><br><span class="line">            //添加用户对应的角色</span><br><span class="line">            roleService.addUserRole(userId,roleIds);</span><br><span class="line">            return mzResult;</span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            return new MzResult(&quot;保存角色失败&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">---------------------------------------------------------------------------------</span><br><span class="line">    RoleServiceImpl.java</span><br><span class="line">    @Transactional</span><br><span class="line">    @Override</span><br><span class="line">    public void addUserRole(String userId, List roleIds) &#123;</span><br><span class="line">        List userRolesList = new ArrayList();</span><br><span class="line">        for (Object roleId : roleIds) &#123;</span><br><span class="line">            Map mp = new HashMap();</span><br><span class="line">            mp.put(&quot;userId&quot;,userId);</span><br><span class="line">            mp.put(&quot;roleId&quot;,roleId);</span><br><span class="line">            userRolesList.add(mp);</span><br><span class="line">        &#125;</span><br><span class="line">        //先删除用户角色</span><br><span class="line">        roleMapper.deleteUserRole(Long.parseLong(userId));</span><br><span class="line">        //添加用户角色</span><br><span class="line">        roleMapper.addUserRole(userRolesList);</span><br><span class="line">    &#125;</span><br><span class="line"> -------------------------------------------------------------------</span><br><span class="line"> ROleMapper.java</span><br><span class="line">   //删除用户角色</span><br><span class="line">    @Delete(&quot;delete from t_user_role where userid = #&#123;userId&#125;&quot;)</span><br><span class="line">    void deleteUserRole(Long userId);</span><br><span class="line"></span><br><span class="line">    //添加用户角色</span><br><span class="line">    void addUserRole(List userRoles);</span><br></pre></td></tr></table></figure>
+
+<p>RoleMapper.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 添加用户的角色--&gt;</span><br><span class="line">	&lt;insert id=&quot;addUserRole&quot; parameterType=&quot;java.util.List&quot;&gt;</span><br><span class="line">		insert into t_user_role(userid,roleid)</span><br><span class="line">		values</span><br><span class="line">		&lt;foreach collection=&quot;list&quot; item=&quot;item&quot; separator=&quot;,&quot;&gt;</span><br><span class="line">			(#&#123;item.userId&#125;,#&#123;item.roleId&#125;)</span><br><span class="line">		&lt;/foreach&gt;</span><br><span class="line">	&lt;/insert&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="29-权限管理-权限列表"><a href="#29-权限管理-权限列表" class="headerlink" title="29 权限管理-权限列表"></a>29 权限管理-权限列表</h2><p>同样原理 ，引入权限模块 permission_list.html</p>
+<p>新增PermissionController.java类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class PermissionController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private IPermissionService permissionService;</span><br><span class="line"></span><br><span class="line">    @PreAuthorize(&quot;hasRole(&#x27;管理员&#x27;)&quot;)</span><br><span class="line">    @RequestMapping(&quot;/permission/index&quot;)</span><br><span class="line">    public String index(Model model)&#123;</span><br><span class="line">        List&lt;Permission&gt; allPermisisons = permissionService.findAllPermisisons();</span><br><span class="line">        model.addAttribute(&quot;permissions&quot;,allPermisisons);</span><br><span class="line">        //返回菜单页面</span><br><span class="line">        return &quot;views/permission/permission_list&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果图:</p>
+<p><img src="https://itfxq-1301816068.cos.ap-chengdu.myqcloud.com/880513b3-9a1a-426f-a70c-3dfd128f4d42.png" alt="Description"></p>
+<h2 id="30-权限管理-添加页面按钮权限"><a href="#30-权限管理-添加页面按钮权限" class="headerlink" title="30 权限管理-添加页面按钮权限"></a>30 权限管理-添加页面按钮权限</h2><p>点击新增的时候，弹出对话框</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">saveBtnPermisison:function()&#123;</span><br><span class="line">              //保存页面按钮权限</span><br><span class="line">              var addBtnPermissionFormObj =  $(&quot;#addBtnPermissionForm&quot;).serializeObject();</span><br><span class="line">              console.log(addBtnPermissionFormObj)</span><br><span class="line">              /**</span><br><span class="line">               * name: &quot;test:add&quot;</span><br><span class="line">                 pid: &quot;33&quot;</span><br><span class="line">                 ptitle: &quot;test子菜单1&quot;</span><br><span class="line">                 title: &quot;测试新增&quot;</span><br><span class="line">               */</span><br><span class="line">              var sendObj = &#123;</span><br><span class="line">                  name:addBtnPermissionFormObj.name,</span><br><span class="line">                  pid:addBtnPermissionFormObj.pid,</span><br><span class="line">                  title:addBtnPermissionFormObj.title</span><br><span class="line">              &#125;</span><br><span class="line">              $.ajax(&#123;</span><br><span class="line">                  type: &quot;post&quot;,</span><br><span class="line">                  url: &quot;/permission/addBtnPermisison&quot;,</span><br><span class="line">                  dataType : &quot;json&quot;,</span><br><span class="line">                  data: JSON.stringify(sendObj),</span><br><span class="line">                  contentType:&#x27;application/json;charset=utf-8&#x27;,</span><br><span class="line">                  success: function (data) &#123;</span><br><span class="line">                      if (data.isSuccess) &#123;</span><br><span class="line">                          $.confirm(&#123;</span><br><span class="line">                              title: &#x27;温馨提示&#x27;,</span><br><span class="line">                              content: &#x27;保存成功&#x27;,</span><br><span class="line">                              type: &#x27;green&#x27;,</span><br><span class="line">                              buttons: &#123;</span><br><span class="line">                                  omg: &#123;</span><br><span class="line">                                      text: &#x27;谢谢&#x27;,</span><br><span class="line">                                      btnClass: &#x27;btn-green&#x27;,</span><br><span class="line">                                      action:function()&#123;</span><br><span class="line">                                          $(&#x27;#AddBtnPermissionModal&#x27;).modal(&#x27;hide&#x27;);</span><br><span class="line">                                          window.location.href=&quot;/permission/index&quot;;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                  &#125;</span><br><span class="line">                              &#125;</span><br><span class="line">                          &#125;);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;);</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>
+
+<p>java代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">PermissionController.java</span><br><span class="line"></span><br><span class="line">@PreAuthorize(&quot;hasRole(&#x27;管理员&#x27;)&quot;)</span><br><span class="line">    @RequestMapping(&quot;/permission/addBtnPermisison&quot;)</span><br><span class="line">    @ResponseBody</span><br><span class="line">    public MzResult addBtnPermission(@RequestBody Permission permission)&#123;</span><br><span class="line">        MzResult ajaxResult = new MzResult();</span><br><span class="line">        try&#123;</span><br><span class="line">            //&#123;name:xxx,pid:xxx,title:xxx&#125;</span><br><span class="line">            permissionService.addBtnPermisison(permission);</span><br><span class="line">            return ajaxResult;</span><br><span class="line">        &#125;catch(Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            return new MzResult(&quot;保存失败&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>PermissisonMapper.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Insert(&quot;insert into t_permission (name,title,pid) values(#&#123;name&#125;,#&#123;title&#125;,#&#123;pid&#125;)&quot;)</span><br><span class="line">   void addBtnPermission(Permission permission);</span><br></pre></td></tr></table></figure>
+
+<p>效果图:</p>
+<p><img src="https://itfxq-1301816068.cos.ap-chengdu.myqcloud.com/6904e4f2-8236-45bf-a7f6-62f677f0dc88.png" alt="Description"></p>
+<h2 id="31-权限管理-删除权限功能"><a href="#31-权限管理-删除权限功能" class="headerlink" title="31 权限管理-删除权限功能"></a>31 权限管理-删除权限功能</h2><p>删除前台功能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">function del(row) &#123;</span><br><span class="line">    </span><br><span class="line">           if(!row.pid)&#123;</span><br><span class="line">            $.confirm(&#123;</span><br><span class="line">                title: &#x27;温馨提示&#x27;,</span><br><span class="line">                content: &#x27;只能删除按钮权限!!&#x27;,</span><br><span class="line">                type: &#x27;red&#x27;,</span><br><span class="line">                buttons: &#123;</span><br><span class="line">                    close: &#123;</span><br><span class="line">                        text: &#x27;谢谢&#x27;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: &quot;post&quot;,</span><br><span class="line">            url: &quot;/permission/deletePermisison&quot;,</span><br><span class="line">            data: &#123;&quot;id&quot;:row.id&#125;,</span><br><span class="line">            success: function (data) &#123;</span><br><span class="line">                if (data.isSuccess) &#123;</span><br><span class="line">                    window.location.href=&quot;/permission/index&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>删除后台功能</p>
+<p>PermissionController.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@PreAuthorize(&quot;hasRole(&#x27;管理员&#x27;)&quot;)</span><br><span class="line">   @RequestMapping(&quot;/permission/deletePermisison&quot;)</span><br><span class="line">   @ResponseBody</span><br><span class="line">   public MzResult deletePermisison(Long id)&#123;</span><br><span class="line">       MzResult ajaxResult = new MzResult();</span><br><span class="line">       try&#123;</span><br><span class="line">           //删除权限 通过权限id</span><br><span class="line">           permissionService.deletePermisisonByPid(id);</span><br><span class="line">           return ajaxResult;</span><br><span class="line">       &#125;catch(Exception e)&#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">           return new MzResult(&quot;保存失败&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>PermissionServiceImpl.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">     *    删除权限</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    @Transactional(rollbackFor=RuntimeException.class)</span><br><span class="line">    public void deletePermisisonByPid(Long id) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            //删除中间表数据</span><br><span class="line">            permissionMapper.deleteRolePermisisonByPid(id);</span><br><span class="line">            //删除权限表数据</span><br><span class="line">            permissionMapper.deletePermisisonByPid(id);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>PermissionMapper.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Delete(&quot;delete from t_permission where id=#&#123;id&#125;&quot;)</span><br><span class="line">void deletePermisisonByPid(Long id);</span><br><span class="line"></span><br><span class="line">@Delete(&quot;delete from t_role_permission where permissionid=#&#123;id&#125;&quot;)</span><br><span class="line">void deleteRolePermisisonByPid(Long id);</span><br></pre></td></tr></table></figure>
+
+<h2 id="32权限管理-修改权限"><a href="#32权限管理-修改权限" class="headerlink" title="32权限管理-修改权限"></a>32权限管理-修改权限</h2><p>修改权限，这里修改的权限，只能修改 按钮的权限，父级权限不能修改，因为父级权限是 左侧菜单。</p>
+<p>所以修改的代码:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">//修改的表单</span><br><span class="line"> &lt;!-- 修改子级菜单form start--&gt;</span><br><span class="line">                                &lt;div class=&quot;modal fade&quot; id=&quot;EditBtnPermissionModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot;&gt;</span><br><span class="line">                                    &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;</span><br><span class="line">                                        &lt;div class=&quot;modal-content&quot;&gt;</span><br><span class="line">                                            &lt;div class=&quot;modal-header&quot;&gt;</span><br><span class="line">                                                &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;</span><br><span class="line">                                                    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;</span><br><span class="line">                                                &lt;h4 class=&quot;modal-title&quot; &gt;修改页面按钮权限&lt;/h4&gt;</span><br><span class="line">                                            &lt;/div&gt;</span><br><span class="line">                                            &lt;form id=&quot;editBtnPermissionForm&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br><span class="line">                                                &lt;div class=&quot;modal-body&quot;&gt;</span><br><span class="line"></span><br><span class="line">                                                    &lt;!-- 按钮权限--&gt;</span><br><span class="line">                                                    &lt;div class=&quot;form-group&quot;&gt;</span><br><span class="line">                                                        &lt;!-- 页面权限id--&gt;</span><br><span class="line">                                                        &lt;input type=&quot;hidden&quot; class=&quot;form-control&quot; name=&quot;id&quot; id=&quot;e_id&quot;&gt;</span><br><span class="line">                                                        &lt;label for=&quot;a_btnTitle&quot; class=&quot;control-label&quot;&gt;页面按钮权限名称：&lt;/label&gt;</span><br><span class="line">                                                        &lt;input type=&quot;text&quot; placeholder=&quot;如:用户新增&quot; class=&quot;form-control&quot; name=&quot;title&quot; id=&quot;e_btnTitle&quot;&gt;</span><br><span class="line">                                                    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">                                                    &lt;div class=&quot;form-group&quot;&gt;</span><br><span class="line">                                                        &lt;label  class=&quot;control-label&quot;&gt;页面按钮权限值：&lt;/label&gt;</span><br><span class="line">                                                        &lt;input type=&quot;text&quot; placeholder=&quot;如:user:add&quot; class=&quot;form-control&quot; name=&quot;name&quot; id=&quot;e_name&quot;&gt;</span><br><span class="line">                                                    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">                                                &lt;/div&gt;</span><br><span class="line">                                                &lt;div class=&quot;modal-footer&quot;&gt;</span><br><span class="line">                                                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;关闭&lt;/button&gt;</span><br><span class="line">                                                    &lt;button type=&quot;button&quot; data-method=&#x27;editSaveBtnPermisison&#x27; class=&quot;btn btn-primary&quot;&gt;保存&lt;/button&gt;</span><br><span class="line">                                                &lt;/div&gt;</span><br><span class="line">                                            &lt;/form&gt;</span><br><span class="line">                                        &lt;/div&gt;</span><br><span class="line">                                    &lt;/div&gt;</span><br><span class="line">                                &lt;/div&gt;</span><br><span class="line">                                &lt;!-- 修改子级菜单form end--&gt;</span><br><span class="line">function update(row) &#123;</span><br><span class="line"></span><br><span class="line">        if(!row.pid)&#123;</span><br><span class="line">            $.confirm(&#123;</span><br><span class="line">                title: &#x27;温馨提示&#x27;,</span><br><span class="line">                content: &#x27;只能修改按钮权限!!&#x27;,</span><br><span class="line">                type: &#x27;red&#x27;,</span><br><span class="line">                buttons: &#123;</span><br><span class="line">                    close: &#123;</span><br><span class="line">                        text: &#x27;谢谢&#x27;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        $(&#x27;#EditBtnPermissionModal&#x27;).modal(&#123;</span><br><span class="line">            show: true,</span><br><span class="line">            backdrop:&#x27;static&#x27;</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;#e_id&quot;).val(row.id);</span><br><span class="line">        $(&quot;#e_btnTitle&quot;).val(row.title);</span><br><span class="line">        $(&quot;#e_name&quot;).val(row.name);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>后台的java代码</p>
+<p>PermissionController.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@PreAuthorize(&quot;hasRole(&#x27;管理员&#x27;)&quot;)</span><br><span class="line">   @RequestMapping(&quot;/permission/editBtnPermisison&quot;)</span><br><span class="line">   @ResponseBody</span><br><span class="line">   public MzResult editBtnPermisison(@RequestBody Permission permission)&#123;</span><br><span class="line">       MzResult ajaxResult = new MzResult();</span><br><span class="line">       try&#123;</span><br><span class="line">           //&#123;name:xxx,pid:xxx,title:xxx&#125;</span><br><span class="line">           permissionService.editBtnPermisison(permission);</span><br><span class="line">           return ajaxResult;</span><br><span class="line">       &#125;catch(Exception e)&#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">           return new MzResult(&quot;保存失败&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>PermissionMapper.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Update(&quot;update t_permission set name=#&#123;name&#125;,title=#&#123;title&#125; where id=#&#123;id&#125;&quot;)</span><br><span class="line">void editBtnPermisison(Permission permission);</span><br></pre></td></tr></table></figure>
+
+<h2 id="33-菜单权限控制"><a href="#33-菜单权限控制" class="headerlink" title="33 菜单权限控制"></a>33 菜单权限控制</h2><p>不同的人 登录进入系统 看到的菜单内容不一样</p>
+<p>取消测试列表菜单</p>
+<p><img src="https://itfxq-1301816068.cos.ap-chengdu.myqcloud.com/ed7915b6-5adf-4e3c-bb05-5c2cd4636a12.png" alt="Description"></p>
+<p>列表菜单不会展示测试列表菜单</p>
+<h2 id="34-菜单权限控制"><a href="#34-菜单权限控制" class="headerlink" title="34 菜单权限控制"></a>34 菜单权限控制</h2><p>比如 用户列表的 新增功能 需要管理员权限 才能新增.在按钮前面添加 权限控制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button sec:authorize= &quot;hasRole(&#x27;管理员&#x27;) &amp;&amp; hasAuthority(&#x27;user:add&#x27;)&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot; data-method=&quot;add&quot; &gt;</span><br><span class="line">                                        &lt;i class=&quot;mdi mdi-plus&quot;&gt;&lt;/i&gt;新增</span><br><span class="line">                                    &lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在角色维护里面 去掉用户新增</p>
+<p><img src="https://itfxq-1301816068.cos.ap-chengdu.myqcloud.com/d89677c5-8270-401e-b850-d367bca53726.png" alt="Description"></p>
+<p>重新登录 查看页面上 没有新增按钮</p>
+<p>js里面控制权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if ([[$&#123;#authorization.expression(&#x27;hasRole(&#x27;&#x27;ROLE_管理员&#x27;&#x27;)&#x27;)&#125;]] &amp;&amp; [[$&#123;#authorization.expression(&#x27;hasAuthority(&#x27;&#x27;user:edit&#x27;&#x27;)&#x27;)&#125;]]) &#123;</span><br><span class="line">                  var c = &#x27;&lt;a class=&quot;btn btn-xs btn-default&quot; href=&quot;#!&quot;   onclick=\&#x27;edit(&quot;&#x27; + row.id + &#x27;&quot;)\&#x27; title=&quot;编辑&quot; data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;&#x27;;</span><br><span class="line">                  var e = &#x27;&lt;div class=&quot;btn btn-xs btn-default&quot;  href=&quot;#!&quot; onclick=&quot;del(\&#x27;&#x27;+row.id+&#x27;\&#x27;)&quot; title=&quot;删除&quot;  data-toggle=&quot;tooltip&quot;&gt;&lt;i class=&quot;mdi mdi-window-close&quot;&gt;&lt;/i&gt;&lt;div/&gt; &#x27;;</span><br><span class="line">                return c+e;</span><br><span class="line">              &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="35-项目结束语"><a href="#35-项目结束语" class="headerlink" title="35 项目结束语"></a>35 项目结束语</h2><p>(1)谢谢大家的学习，如果有不懂的地方,及时联系我 答疑；</p>
+<p> 您的付出永远和您薪水成正比. 行动起来吧!</p>
+<p> 答疑qq: 3427562614</p>
+<p>(2)如果有地方讲的不好，千万不要喷，可以找我聊聊, 一起学习 共进步 ；</p>
+<p>(3)学习项目实战找我们, 专注于 单体 前后端分离 分布式项目 小程序 安卓APP 商业项目定制 项目调试 项目实战辅导 等等</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2022/08/20/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F3/">http://example.com/2022/08/20/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F3/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/08/20/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0%E5%92%8C%E5%A4%87%E6%A1%88%E6%B5%81%E7%A8%8B/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="阿里云域名购买和备案流程">
+                        
+                        <span class="card-title">阿里云域名购买和备案流程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/08/20/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="权限管理系统2">
+                        
+                        <span class="card-title">权限管理系统2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lilinzhi666/lilinzhi666.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:3427562614@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3427562614" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3427562614" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

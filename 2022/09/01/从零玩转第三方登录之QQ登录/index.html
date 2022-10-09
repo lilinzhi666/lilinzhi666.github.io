@@ -1,0 +1,1237 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="从零玩转第三方登录之QQ登录, lilinzhi">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>从零玩转第三方登录之QQ登录 | lilinzhi</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="lilinzhi" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">lilinzhi</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/music" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>music</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">lilinzhi</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/music" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			music
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">从零玩转第三方登录之QQ登录</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-09-01
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="从零玩转第三方登录之QQ登录"><a href="#从零玩转第三方登录之QQ登录" class="headerlink" title="从零玩转第三方登录之QQ登录"></a>从零玩转第三方登录之QQ登录</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在真正开始对接之前，我们先来聊一聊后台的方案设计。既然是对接第三方登录，那就免不了如何将用户信息保存。首先需要明确一点的是，用户在第三方登录成功之后，<br>我们能拿到的仅仅是一个代表用户唯一身份的ID（微博是真实uid，QQ是加密的openID）以及用来识别身份的accessToken，当然还有昵称、头像、性别等有限资料，<br>对接第三方登录的关键就是如何确定用户是合法登录，如果确定这次登录的和上次登录的是同一个人并且不是假冒的。其实这个并不用我们特别操心，就以微博登录为例，<br>用户登录成功之后会回调一个code给我们，然后我们再拿code去微博那换取 accessToken ，如果这个code是用户乱填的，那这一关肯定过不了，所以，前面的担心有点多余，哈哈。</p>
+<h1 id="1-认识Oauth2-0"><a href="#1-认识Oauth2-0" class="headerlink" title="1. 认识Oauth2.0"></a>1. 认识Oauth2.0</h1><p>现在很多网站都要不管是为了引流也好，为了用户方便也好一般都有第三方账号登陆的需求，今天以QQ登陆为例，来实现一个最简单的第三方登陆。<br>目前主流的第三方登录都是依赖的Oauth2.0实现的，最常见的就是在各种中小型网站或者App中的QQ登录，微信登录等等。所以我建议想要学习和实现第三方登录同学去了解下这个协议。</p>
+<h3 id="必须要域名并且进行备案"><a href="#必须要域名并且进行备案" class="headerlink" title="必须要域名并且进行备案"></a>必须要域名并且进行备案</h3><p>比如我的域名： <a target="_blank" rel="noopener" href="https://lianlihe.com/">https://lianlihe.com</a><br>因为腾讯有一个域名认证机制啥的。。。。。。</p>
+<p>2.实名认证<br>QQ登录我们对接的是QQ互联，地址：<code>https://connect.qq.com</code> ,首先需要注册成为开发者并实名认证，需要手持身份证照片，具体就不讲了。</p>
+<h3 id="2-1、进行申请开发者身份"><a href="#2-1、进行申请开发者身份" class="headerlink" title="2.1、进行申请开发者身份"></a>2.1、进行申请开发者身份</h3><h3 id="2-2-创建应用"><a href="#2-2-创建应用" class="headerlink" title="2.2 创建应用"></a>2.2 创建应用</h3><h4 id="进入应用管理页面创建应用，根据实际需要是创建网站应用还是移动应用，我这里是网站应用："><a href="#进入应用管理页面创建应用，根据实际需要是创建网站应用还是移动应用，我这里是网站应用：" class="headerlink" title="进入应用管理页面创建应用，根据实际需要是创建网站应用还是移动应用，我这里是网站应用："></a>进入应用管理页面创建应用，根据实际需要是创建网站应用还是移动应用，我这里是网站应用：</h4><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824085227037.png" alt="image-20220824085227037"><br><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824085155054.png" alt="image-20220824085155054"></p>
+<h4 id="提交成功完步后等待客服审核即可"><a href="#提交成功完步后等待客服审核即可" class="headerlink" title="提交成功完步后等待客服审核即可"></a>提交成功完步后等待客服审核即可</h4><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824085138315.png" alt="image-20220824085138315"></p>
+<h4 id="这是我网站的基本接口信息"><a href="#这是我网站的基本接口信息" class="headerlink" title="这是我网站的基本接口信息"></a>这是我网站的基本接口信息</h4><p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824085239345.png" alt="image-20220824085239345"></p>
+<h1 id="QQ登陆流程"><a href="#QQ登陆流程" class="headerlink" title="QQ登陆流程"></a>QQ登陆流程</h1><p><img src="https://qiniu.yangbuyi.top/yby-img/image-1653486864749.png?imageView2/0/q/75%7Cwatermark/2/text/d3d3LnlhbmdidXlpLnRvcA==/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzA2MDYwNg==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cwatermark/2/text/5p2o5LiN5piT/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzAzMDMwMw==/dissolve/100/gravity/NorthWest/dx/10/dy/10" alt="image-1653486864749"></p>
+<h4 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h4><p><img src="https://qiniu.yangbuyi.top/yby-img/image-1653486872297.png?imageView2/0/q/75%7Cwatermark/2/text/d3d3LnlhbmdidXlpLnRvcA==/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzA2MDYwNg==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cwatermark/2/text/5p2o5LiN5piT/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzAzMDMwMw==/dissolve/100/gravity/NorthWest/dx/10/dy/10" alt="image-1653486872297"></p>
+<h1 id="创建springboot工程"><a href="#创建springboot工程" class="headerlink" title="创建springboot工程"></a>创建springboot工程</h1><h4 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- qq登陆集成 开始 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;httpcore&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">4.4</span><span class="number">.11</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;httpclient&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">4.5</span><span class="number">.8</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;httpasyncclient&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;httpmime&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--json转换工具--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;gson&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">2.8</span><span class="number">.5</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--QQSDK--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.gplatform&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;Sdk4J&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">2.0</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">1.2</span><span class="number">.62</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- qq登陆集成 结束 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!-- 模板 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!-- 其它配置 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">    &lt;optional&gt;<span class="literal">true</span>&lt;/optional&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;</span><br><span class="line">    &lt;optional&gt;<span class="literal">true</span>&lt;/optional&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>***&lt;已自动折叠&gt;***</p>
+<h3 id="创建http请求工具"><a href="#创建http请求工具" class="headerlink" title="创建http请求工具"></a>创建http请求工具</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.HttpEntity;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.HttpResponse;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.NameValuePair;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.HttpClient;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.config.RequestConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.entity.UrlEncodedFormEntity;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.methods.CloseableHttpResponse;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.methods.HttpGet;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.methods.HttpPost;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.conn.ssl.SSLConnectionSocketFactory;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.conn.ssl.TrustStrategy;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.StringEntity;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.client.CloseableHttpClient;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.client.HttpClients;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.conn.PoolingHttpClientConnectionManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.message.BasicNameValuePair;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.ssl.SSLContextBuilder;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.util.EntityUtils;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.HostnameVerifier;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.SSLContext;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.SSLSession;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.nio.charset.Charset;</span><br><span class="line"><span class="keyword">import</span> java.security.GeneralSecurityException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.CertificateException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.X509Certificate;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HttpsUtils</span> &#123;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">static</span> PoolingHttpClientConnectionManager connMgr;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">static</span> RequestConfig requestConfig;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">MAX_TIMEOUT</span> <span class="operator">=</span> <span class="number">7000</span>;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">logger</span> <span class="operator">=</span> LoggerFactory.getLogger(HttpsUtils.class);</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">static</span> &#123;</span><br><span class="line">            <span class="comment">// 设置连接池</span></span><br><span class="line">            connMgr = <span class="keyword">new</span> <span class="title class_">PoolingHttpClientConnectionManager</span>();</span><br><span class="line">            <span class="comment">// 设置连接池大小</span></span><br><span class="line">            connMgr.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">            connMgr.setDefaultMaxPerRoute(connMgr.getMaxTotal());</span><br><span class="line">            <span class="comment">// Validate connections after 1 sec of inactivity</span></span><br><span class="line">            connMgr.setValidateAfterInactivity(<span class="number">1000</span>);</span><br><span class="line">            RequestConfig.<span class="type">Builder</span> <span class="variable">configBuilder</span> <span class="operator">=</span> RequestConfig.custom();</span><br><span class="line">            <span class="comment">// 设置连接超时</span></span><br><span class="line">            configBuilder.setConnectTimeout(MAX_TIMEOUT);</span><br><span class="line">            <span class="comment">// 设置读取超时</span></span><br><span class="line">            configBuilder.setSocketTimeout(MAX_TIMEOUT);</span><br><span class="line">            <span class="comment">// 设置从连接池获取连接实例的超时</span></span><br><span class="line">            configBuilder.setConnectionRequestTimeout(MAX_TIMEOUT);</span><br><span class="line">            </span><br><span class="line">            requestConfig = configBuilder.build();</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 发送 GET 请求（HTTP），不带输入数据</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> url</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doGet</span><span class="params">(String url)</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> doGet(url, <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, Object&gt;());</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 发送 GET 请求（HTTP），K-V形式</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> url</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> params</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doGet</span><span class="params">(String url, Map&lt;String, Object&gt; params)</span> &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">apiUrl</span> <span class="operator">=</span> url;</span><br><span class="line">            <span class="type">StringBuffer</span> <span class="variable">param</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">            <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (String key : params.keySet()) &#123;</span><br><span class="line">                  <span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">                        param.append(<span class="string">&quot;?&quot;</span>);</span><br><span class="line">                  <span class="keyword">else</span></span><br><span class="line">                        param.append(<span class="string">&quot;&amp;&quot;</span>);</span><br><span class="line">                  param.append(key).append(<span class="string">&quot;=&quot;</span>).append(params.get(key));</span><br><span class="line">                  i++;</span><br><span class="line">            &#125;</span><br><span class="line">            apiUrl += param;</span><br><span class="line">            <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="type">HttpClient</span> <span class="variable">httpClient</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">if</span> (apiUrl.startsWith(<span class="string">&quot;https&quot;</span>)) &#123;</span><br><span class="line">                  httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())</span><br><span class="line">                        .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                  httpClient = HttpClients.createDefault();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                  <span class="type">HttpGet</span> <span class="variable">httpGet</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HttpGet</span>(apiUrl);</span><br><span class="line">                  <span class="type">HttpResponse</span> <span class="variable">response</span> <span class="operator">=</span> httpClient.execute(httpGet);</span><br><span class="line">                  <span class="type">HttpEntity</span> <span class="variable">entity</span> <span class="operator">=</span> response.getEntity();</span><br><span class="line">                  <span class="keyword">if</span> (entity != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="type">InputStream</span> <span class="variable">instream</span> <span class="operator">=</span> entity.getContent();</span><br><span class="line">                        result = <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(instream)).lines().collect(Collectors.joining(System.lineSeparator()));</span><br><span class="line">                  &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                  logger.error(e.getMessage());</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 发送 POST 请求（HTTP），不带输入数据</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> apiUrl</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doPost</span><span class="params">(String apiUrl)</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> doPost(apiUrl, <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, Object&gt;());</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 发送 POST 请求，K-V形式</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> apiUrl API接口URL</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> params 参数map</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doPost</span><span class="params">(String apiUrl, Map&lt;String, Object&gt; params)</span> &#123;</span><br><span class="line">            <span class="type">CloseableHttpClient</span> <span class="variable">httpClient</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">if</span> (apiUrl.startsWith(<span class="string">&quot;https&quot;</span>)) &#123;</span><br><span class="line">                  httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())</span><br><span class="line">                        .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                  httpClient = HttpClients.createDefault();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">String</span> <span class="variable">httpStr</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="type">HttpPost</span> <span class="variable">httpPost</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HttpPost</span>(apiUrl);</span><br><span class="line">            <span class="type">CloseableHttpResponse</span> <span class="variable">response</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                  httpPost.setConfig(requestConfig);</span><br><span class="line">                  List&lt;NameValuePair&gt; pairList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(params.size());</span><br><span class="line">                  <span class="keyword">for</span> (Map.Entry&lt;String, Object&gt; entry : params.entrySet()) &#123;</span><br><span class="line">                        <span class="type">NameValuePair</span> <span class="variable">pair</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BasicNameValuePair</span>(entry.getKey(), entry.getValue().toString());</span><br><span class="line">                        pairList.add(pair);</span><br><span class="line">                  &#125;</span><br><span class="line">                  httpPost.setEntity(<span class="keyword">new</span> <span class="title class_">UrlEncodedFormEntity</span>(pairList, Charset.forName(<span class="string">&quot;UTF-8&quot;</span>)));</span><br><span class="line">                  response = httpClient.execute(httpPost);</span><br><span class="line">                  <span class="type">HttpEntity</span> <span class="variable">entity</span> <span class="operator">=</span> response.getEntity();</span><br><span class="line">                  httpStr = EntityUtils.toString(entity, <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                  logger.error(e.getMessage());</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                  <span class="keyword">if</span> (response != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                              EntityUtils.consume(response.getEntity());</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                              logger.error(e.getMessage());</span><br><span class="line">                        &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> httpStr;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 发送 POST 请求，JSON形式</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> apiUrl</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> json   json对象</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doPost</span><span class="params">(String apiUrl, Object json)</span> &#123;</span><br><span class="line">            <span class="type">CloseableHttpClient</span> <span class="variable">httpClient</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">if</span> (apiUrl.startsWith(<span class="string">&quot;https&quot;</span>)) &#123;</span><br><span class="line">                  httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())</span><br><span class="line">                        .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                  httpClient = HttpClients.createDefault();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">String</span> <span class="variable">httpStr</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="type">HttpPost</span> <span class="variable">httpPost</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HttpPost</span>(apiUrl);</span><br><span class="line">            <span class="type">CloseableHttpResponse</span> <span class="variable">response</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                  httpPost.setConfig(requestConfig);</span><br><span class="line">                  <span class="type">StringEntity</span> <span class="variable">stringEntity</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringEntity</span>(json.toString(), <span class="string">&quot;UTF-8&quot;</span>);<span class="comment">// 解决中文乱码问题</span></span><br><span class="line">                  stringEntity.setContentEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">                  stringEntity.setContentType(<span class="string">&quot;application/json&quot;</span>);</span><br><span class="line">                  httpPost.setEntity(stringEntity);</span><br><span class="line">                  response = httpClient.execute(httpPost);</span><br><span class="line">                  <span class="type">HttpEntity</span> <span class="variable">entity</span> <span class="operator">=</span> response.getEntity();</span><br><span class="line">                  httpStr = EntityUtils.toString(entity, <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                  logger.error(e.getMessage());</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                  <span class="keyword">if</span> (response != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                              EntityUtils.consume(response.getEntity());</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                              logger.error(e.getMessage());</span><br><span class="line">                        &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> httpStr;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 创建SSL安全连接</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">static</span> SSLConnectionSocketFactory <span class="title function_">createSSLConnSocketFactory</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="type">SSLConnectionSocketFactory</span> <span class="variable">sslsf</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                  <span class="type">SSLContext</span> <span class="variable">sslContext</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SSLContextBuilder</span>().loadTrustMaterial(<span class="literal">null</span>, <span class="keyword">new</span> <span class="title class_">TrustStrategy</span>() &#123;</span><br><span class="line">                        </span><br><span class="line">                        <span class="meta">@Override</span></span><br><span class="line">                        <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isTrusted</span><span class="params">(X509Certificate[] chain, String authType)</span> <span class="keyword">throws</span> CertificateException &#123;</span><br><span class="line">                              <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                  &#125;).build();</span><br><span class="line">                  sslsf = <span class="keyword">new</span> <span class="title class_">SSLConnectionSocketFactory</span>(sslContext, <span class="keyword">new</span> <span class="title class_">HostnameVerifier</span>() &#123;</span><br><span class="line">                        </span><br><span class="line">                        <span class="meta">@Override</span></span><br><span class="line">                        <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">verify</span><span class="params">(String arg0, SSLSession arg1)</span> &#123;</span><br><span class="line">                              <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                  &#125;);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (GeneralSecurityException e) &#123;</span><br><span class="line">                  logger.error(e.getMessage());</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> sslsf;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/*gitHub开始*/</span></span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 发送get请求，利用java代码发送请求</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> url</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">doGetHub</span><span class="params">(String url)</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="type">CloseableHttpClient</span> <span class="variable">httpclient</span> <span class="operator">=</span> HttpClients.createDefault();</span><br><span class="line">            </span><br><span class="line">            <span class="type">HttpGet</span> <span class="variable">httpGet</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HttpGet</span>(url);</span><br><span class="line">            <span class="comment">// 发送了一个http请求</span></span><br><span class="line">            <span class="type">CloseableHttpResponse</span> <span class="variable">response</span> <span class="operator">=</span> httpclient.execute(httpGet);</span><br><span class="line">            <span class="comment">// 如果响应200成功,解析响应结果</span></span><br><span class="line">            <span class="keyword">if</span>(response.getStatusLine().getStatusCode()==<span class="number">200</span>)&#123;</span><br><span class="line">                  <span class="comment">// 获取响应的内容</span></span><br><span class="line">                  <span class="type">HttpEntity</span> <span class="variable">responseEntity</span> <span class="operator">=</span> response.getEntity();</span><br><span class="line">                  </span><br><span class="line">                  <span class="keyword">return</span> EntityUtils.toString(responseEntity);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 将字符串转换成map</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> responseEntity</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String,String&gt; <span class="title function_">getMap</span><span class="params">(String responseEntity)</span> &#123;</span><br><span class="line">            </span><br><span class="line">            Map&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">            <span class="comment">// 以&amp;来解析字符串</span></span><br><span class="line">            String[] result = responseEntity.split(<span class="string">&quot;\\&amp;&quot;</span>);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">for</span> (String str : result) &#123;</span><br><span class="line">                  <span class="comment">// 以=来解析字符串</span></span><br><span class="line">                  String[] split = str.split(<span class="string">&quot;=&quot;</span>);</span><br><span class="line">                  <span class="comment">// 将字符串存入map中</span></span><br><span class="line">                  <span class="keyword">if</span> (split.length == <span class="number">1</span>) &#123;</span><br><span class="line">                        map.put(split[<span class="number">0</span>], <span class="literal">null</span>);</span><br><span class="line">                  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        map.put(split[<span class="number">0</span>], split[<span class="number">1</span>]);</span><br><span class="line">                  &#125;</span><br><span class="line">                  </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> map;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 通过json获得map</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> responseEntity</span></span><br><span class="line"><span class="comment">       * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String,String&gt; <span class="title function_">getMapByJson</span><span class="params">(String responseEntity)</span> &#123;</span><br><span class="line">            Map&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">            <span class="comment">// 阿里巴巴fastjson  将json转换成map</span></span><br><span class="line">            <span class="type">JSONObject</span> <span class="variable">jsonObject</span> <span class="operator">=</span> JSONObject.parseObject(responseEntity);</span><br><span class="line">            <span class="keyword">for</span> (Map.Entry&lt;String, Object&gt; entry : jsonObject.entrySet()) &#123;</span><br><span class="line">                  <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> entry.getKey();</span><br><span class="line">                  <span class="comment">// 将obj转换成string</span></span><br><span class="line">                  <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> String.valueOf(entry.getValue()) ;</span><br><span class="line">                  map.put(key, value);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> map;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">/*gitHub结束*/</span></span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>***&lt;已自动折叠&gt;***</p>
+<h3 id="创建跨域配置类-以防万一出现跨域问题"><a href="#创建跨域配置类-以防万一出现跨域问题" class="headerlink" title="创建跨域配置类 以防万一出现跨域问题"></a>创建跨域配置类 以防万一出现跨域问题</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.cors.CorsConfiguration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.cors.UrlBasedCorsConfigurationSource;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.filter.CorsFilter;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CorsAutoConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> CorsFilter <span class="title function_">corsFilter</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">UrlBasedCorsConfigurationSource</span> <span class="variable">urlBasedCorsConfigurationSource</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UrlBasedCorsConfigurationSource</span>();</span><br><span class="line">        <span class="type">CorsConfiguration</span> <span class="variable">corsConfiguration</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CorsConfiguration</span>();</span><br><span class="line">        corsConfiguration.addAllowedHeader(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">        corsConfiguration.addAllowedMethod(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">        <span class="comment">// 表示什么域名跨域 *表示全部都跨域</span></span><br><span class="line">        corsConfiguration.addAllowedOrigin(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">        <span class="comment">// 注入进去</span></span><br><span class="line">        urlBasedCorsConfigurationSource.registerCorsConfiguration(<span class="string">&quot;/**&quot;</span>, corsConfiguration);</span><br><span class="line"></span><br><span class="line">        <span class="type">CorsFilter</span> <span class="variable">corsFilter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CorsFilter</span>(urlBasedCorsConfigurationSource);</span><br><span class="line">        <span class="keyword">return</span> corsFilter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建Logincontroller"><a href="#创建Logincontroller" class="headerlink" title="创建Logincontroller"></a>创建Logincontroller</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.google.gson.Gson;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.ui.Model;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"><span class="keyword">import</span> top.yangbuyi.QQ.OAuthProperties;</span><br><span class="line"><span class="keyword">import</span> top.yangbuyi.QQ.vo.QQDTO;</span><br><span class="line"><span class="keyword">import</span> top.yangbuyi.QQ.vo.QQOpenidDTO;</span><br><span class="line"><span class="keyword">import</span> top.yangbuyi.common.HttpsUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.management.RuntimeErrorException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.websocket.server.PathParam;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.UUID;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;api&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">loginController</span> &#123;</span><br><span class="line"></span><br><span class="line">	  <span class="comment">/**</span></span><br><span class="line"><span class="comment">	   * 认证参数</span></span><br><span class="line"><span class="comment">	   */</span></span><br><span class="line">	  <span class="meta">@Autowired</span></span><br><span class="line">	  <span class="keyword">private</span> OAuthProperties oauth;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	  <span class="comment">/**</span></span><br><span class="line"><span class="comment">	   * 调用QQ登陆接口</span></span><br><span class="line"><span class="comment">	   * 流程： 先调用接口获取code，在根据code获取access_token,在根据token获取对应的用户信息</span></span><br><span class="line"><span class="comment">	   * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">	   */</span></span><br><span class="line">	  <span class="meta">@GetMapping(&quot;/login/oauth&quot;)</span></span><br><span class="line">	  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">loginQQ</span><span class="params">(  HttpServletResponse response)</span> &#123;</span><br><span class="line">			<span class="comment">// 重定向访问QQ登录服务器</span></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				  response.sendRedirect(oauth.getQQ().getCode_callback_uri() + <span class="comment">//获取code码地址</span></span><br><span class="line">						  <span class="string">&quot;?client_id=&quot;</span> + oauth.getQQ().getClient_id() <span class="comment">//appid</span></span><br><span class="line">						  +<span class="string">&quot;&amp;state=&quot;</span> + UUID.randomUUID() + <span class="comment">//这个说是防攻击的，就给个随机uuid吧</span></span><br><span class="line">						  <span class="string">&quot;&amp;redirect_uri=&quot;</span> + oauth.getQQ().getRedirect_uri() +<span class="comment">//这个很重要，这个是回调地址，即就收腾讯返回的code码</span></span><br><span class="line">						  <span class="string">&quot;&amp;response_type=code&quot;</span>);</span><br><span class="line">			&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">				  e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">	  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	  <span class="comment">/**</span></span><br><span class="line"><span class="comment">	   * 在qq平台设置的回调地址</span></span><br><span class="line"><span class="comment">	   *</span></span><br><span class="line"><span class="comment">	   * 接收回调地址带过来的code码</span></span><br><span class="line"><span class="comment">	   *</span></span><br><span class="line"><span class="comment">	   * <span class="doctag">@param</span> code</span></span><br><span class="line"><span class="comment">	   * <span class="doctag">@param</span> request</span></span><br><span class="line"><span class="comment">	   * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	   */</span></span><br><span class="line">	  <span class="meta">@GetMapping(&quot;/oauth2&quot;)</span></span><br><span class="line">	  <span class="keyword">public</span> String <span class="title function_">authorizeQQ</span><span class="params">(String code, HttpServletRequest request)</span> &#123;</span><br><span class="line">			HashMap&lt;String, Object&gt; params = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">			params.put(<span class="string">&quot;code&quot;</span>, code);</span><br><span class="line">			params.put(<span class="string">&quot;grant_type&quot;</span>, <span class="string">&quot;authorization_code&quot;</span>);</span><br><span class="line">			params.put(<span class="string">&quot;redirect_uri&quot;</span>, oauth.getQQ().getRedirect_uri());</span><br><span class="line">			params.put(<span class="string">&quot;client_id&quot;</span>, oauth.getQQ().getClient_id());</span><br><span class="line">			params.put(<span class="string">&quot;client_secret&quot;</span>, oauth.getQQ().getClient_secret());</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 获取腾讯access token</span></span><br><span class="line">			Map&lt;String, String&gt; reulsts = getAccess_token(params);</span><br><span class="line">			System.out.println(<span class="string">&quot;遍历拿到的数据:&quot;</span>);</span><br><span class="line">			<span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : reulsts.entrySet()) &#123;</span><br><span class="line">				  System.out.println(entry.getKey() + <span class="string">&quot;=&quot;</span> + entry.getValue());</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(<span class="string">&quot;遍历完毕&quot;</span>);</span><br><span class="line"></span><br><span class="line">			<span class="comment">//到这里access_token已经处理好了</span></span><br><span class="line">			<span class="comment">//下一步获取openid，只有拿到openid才能拿到用户信息</span></span><br><span class="line">			<span class="type">String</span> <span class="variable">openidContent</span> <span class="operator">=</span> HttpsUtils.doGet(oauth.getQQ().getOpenid_callback_uri() + <span class="string">&quot;?access_token=&quot;</span> + reulsts.get(<span class="string">&quot;access_token&quot;</span>));</span><br><span class="line">			<span class="comment">// callback( &#123;&quot;client_id&quot;:&quot;101887062&quot;,&quot;openid&quot;:&quot;74DD1353321FD56375F34422D833848D&quot;&#125; );</span></span><br><span class="line">			System.out.println(<span class="string">&quot;openidContent: &quot;</span> + openidContent);</span><br><span class="line"></span><br><span class="line">			<span class="comment">//接下来对openid进行处理</span></span><br><span class="line">			<span class="comment">//截取需要的那部分json字符串</span></span><br><span class="line">			<span class="type">String</span> <span class="variable">openid</span> <span class="operator">=</span> openidContent.substring(openidContent.indexOf(<span class="string">&quot;&#123;&quot;</span>), openidContent.indexOf(<span class="string">&quot;&#125;&quot;</span>) + <span class="number">1</span>);</span><br><span class="line">			<span class="comment">// json 转 对象</span></span><br><span class="line">			<span class="type">Gson</span> <span class="variable">gson</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Gson</span>();</span><br><span class="line">			<span class="comment">//将返回的openid转换成DTO</span></span><br><span class="line">			<span class="type">QQOpenidDTO</span> <span class="variable">qqOpenidDTO</span> <span class="operator">=</span> gson.fromJson(openid, QQOpenidDTO.class);</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 封装参数 请求用户信息数据</span></span><br><span class="line">			params.clear();</span><br><span class="line">			<span class="comment">//设置access_token</span></span><br><span class="line">			params.put(<span class="string">&quot;access_token&quot;</span>, reulsts.get(<span class="string">&quot;access_token&quot;</span>));</span><br><span class="line">			<span class="comment">//设置openid</span></span><br><span class="line">			params.put(<span class="string">&quot;openid&quot;</span>, qqOpenidDTO.getOpenid());</span><br><span class="line">			<span class="comment">//设置appid</span></span><br><span class="line">			params.put(<span class="string">&quot;oauth_consumer_key&quot;</span>, qqOpenidDTO.getClient_id());</span><br><span class="line">			<span class="comment">//获取用户信息</span></span><br><span class="line">			<span class="type">String</span> <span class="variable">userInfo</span> <span class="operator">=</span> HttpsUtils.doGet(oauth.getQQ().getUser_info_callback_uri(), params);</span><br><span class="line">			<span class="type">QQDTO</span> <span class="variable">qqDTO</span> <span class="operator">=</span> gson.fromJson(userInfo, QQDTO.class);</span><br><span class="line">			<span class="comment">// （正常情况下，在开发时候用openid作为用户名，再自己定义个密码就可以了）</span></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">				  <span class="comment">/* 组装数据 */</span></span><br><span class="line">				  HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">				  map.put(<span class="string">&quot;user&quot;</span>, qqDTO);</span><br><span class="line">				  map.put(<span class="string">&quot;qqOpenidDTO&quot;</span>, qqOpenidDTO);</span><br><span class="line">				  request.setAttribute(<span class="string">&quot;map&quot;</span>, map);</span><br><span class="line">				  log.info(<span class="string">&quot;user数据:&#123;&#125;&quot;</span> + qqDTO);</span><br><span class="line">				  log.info(<span class="string">&quot;qqOpenidDTO数据:&#123;&#125;&quot;</span> + qqOpenidDTO);</span><br><span class="line">				  <span class="keyword">return</span> <span class="string">&quot;home&quot;</span>;</span><br><span class="line">			&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				  e.printStackTrace();</span><br><span class="line">				  <span class="keyword">return</span> <span class="string">&quot;login&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">	  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	  <span class="comment">/**</span></span><br><span class="line"><span class="comment">	   * 获取腾讯 access_token</span></span><br><span class="line"><span class="comment">	   *</span></span><br><span class="line"><span class="comment">	   * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	   */</span></span><br><span class="line">	  <span class="keyword">public</span> Map&lt;String, String&gt; <span class="title function_">getAccess_token</span><span class="params">(HashMap&lt;String, Object&gt; params)</span> &#123;</span><br><span class="line">			<span class="comment">// 认证地址</span></span><br><span class="line">			<span class="comment">//获取access_token如：access_token=9724892714FDF1E3ED5A4C6D074AF9CB&amp;expires_in=7776000&amp;refresh_token=9E0DE422742ACCAB629A54B3BFEC61FF</span></span><br><span class="line">			<span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> HttpsUtils.doGet(oauth.getQQ().getAccess_token_callback_uri(), params);</span><br><span class="line">			<span class="comment">//对拿到的数据进行切割字符串</span></span><br><span class="line">			String[] strings = result.split(<span class="string">&quot;&amp;&quot;</span>);</span><br><span class="line">			<span class="comment">//切割好后放进map</span></span><br><span class="line">			Map&lt;String, String&gt; reulsts = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">			<span class="keyword">for</span> (String str : strings) &#123;</span><br><span class="line">				  String[] split = str.split(<span class="string">&quot;=&quot;</span>);</span><br><span class="line">				  <span class="keyword">if</span> (split.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">						reulsts.put(split[<span class="number">0</span>], split[<span class="number">1</span>]);</span><br><span class="line">				  &#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> reulsts;</span><br><span class="line">	  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>***&lt;已自动折叠&gt;***</p>
+<h3 id="创建QQ参数实体类"><a href="#创建QQ参数实体类" class="headerlink" title="创建QQ参数实体类"></a>创建QQ参数实体类</h3><h4 id="创建-OAuthProperties-用于配合yml配置文件动态获取参数"><a href="#创建-OAuthProperties-用于配合yml配置文件动态获取参数" class="headerlink" title="创建 OAuthProperties 用于配合yml配置文件动态获取参数"></a>创建 OAuthProperties 用于配合yml配置文件动态获取参数</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.boot.context.properties.ConfigurationProperties;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取Code码</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="comment">//对应application.yml中，oauth下参数</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;oauth&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OAuthProperties</span> &#123;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">//获取applicaiton.yml下qq下所有的参数</span></span><br><span class="line">      <span class="keyword">private</span> <span class="type">QQProperties</span> <span class="variable">qq</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QQProperties</span>();</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">public</span> QQProperties <span class="title function_">getQQ</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> qq;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setQQ</span><span class="params">(QQProperties qq)</span> &#123;</span><br><span class="line">            <span class="built_in">this</span>.qq = qq;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建-QQProperties-用于请求qq的参数"><a href="#创建-QQProperties-用于请求qq的参数" class="headerlink" title="创建 QQProperties 用于请求qq的参数"></a>创建 QQProperties 用于请求qq的参数</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 集成第三方登陆 QQ  参数</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">QQProperties</span> &#123;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 你的appid</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String client_id;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       *  #你的appkey</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String client_secret;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 你接收响应code码地址</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String redirect_uri;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 腾讯获取code码地址</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String code_callback_uri;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 腾讯获取access_token地址</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String access_token_callback_uri;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 腾讯获取openid地址</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String openid_callback_uri;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 腾讯获取用户信息地址</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String user_info_callback_uri;</span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 要回调到哪个网站</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="keyword">private</span> String redirect_url_index_yby;</span><br><span class="line">      <span class="keyword">private</span> String redirect_url_login_yby;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>***&lt;已自动折叠&gt;***</p>
+<h3 id="创建-QQOpenidDTO-用于获取-access-token、openid"><a href="#创建-QQOpenidDTO-用于获取-access-token、openid" class="headerlink" title="创建 QQOpenidDTO 用于获取 access_token、openid"></a>创建 QQOpenidDTO 用于获取 access_token、openid</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">QQOpenidDTO</span> &#123;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">private</span> String openid;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">private</span> String client_id;</span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建QQDTO-接收QQ返回来的json参数"><a href="#创建QQDTO-接收QQ返回来的json参数" class="headerlink" title="创建QQDTO 接收QQ返回来的json参数"></a>创建QQDTO 接收QQ返回来的json参数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">QQDTO</span> &#123;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">private</span> String ret;        <span class="comment">//返回码</span></span><br><span class="line">      <span class="keyword">private</span> String msg;        <span class="comment">//如果ret&lt;0，会有相应的错误信息提示，返回数据全部用UTF-8编码。</span></span><br><span class="line">      <span class="keyword">private</span> String nickname;             <span class="comment">//用户在QQ空间的昵称。</span></span><br><span class="line">      <span class="keyword">private</span> String figureurl;              <span class="comment">//大小为30×30像素的QQ空间头像URL。</span></span><br><span class="line">      <span class="keyword">private</span> String figureurl_1;                <span class="comment">//大小为50×50像素的QQ空间头像URL。</span></span><br><span class="line">      <span class="keyword">private</span> String figureurl_2;                <span class="comment">//大小为100×100像素的QQ空间头像URL。</span></span><br><span class="line">      <span class="keyword">private</span> String figureurl_qq_1;                   <span class="comment">//大小为40×40像素的QQ头像URL。</span></span><br><span class="line">      <span class="keyword">private</span> String figureurl_qq_2;                   <span class="comment">//大小为100×100像素的QQ头像URL。需要注意，不是所有的用户都拥有QQ的100x100的头像，但40x40像素则是一定会有。</span></span><br><span class="line">      <span class="keyword">private</span> String gender;           <span class="comment">//性别。 如果获取不到则默认返回&quot;男&quot;</span></span><br><span class="line">      <span class="keyword">private</span> Integer gendertype; <span class="comment">// 性别 数字</span></span><br><span class="line">      <span class="keyword">private</span> String is_yellow_vip;                  <span class="comment">//标识用户是否为黄钻用户（0：不是；1：是）。</span></span><br><span class="line">      <span class="keyword">private</span> String vip;        <span class="comment">//标识用户是否为黄钻用户（0：不是；1：是）</span></span><br><span class="line">      <span class="keyword">private</span> String yellow_vip_level;                     <span class="comment">//黄钻等级</span></span><br><span class="line">      <span class="keyword">private</span> String level;          <span class="comment">//黄钻等级</span></span><br><span class="line">      <span class="keyword">private</span> String is_yellow_year_vip;                       <span class="comment">//标识是否为年费黄钻用户（0：不是； 1：是）</span></span><br><span class="line">      <span class="keyword">private</span> String province; <span class="comment">// 省</span></span><br><span class="line">      <span class="keyword">private</span> String city; <span class="comment">// 市</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>***&lt;已自动折叠&gt;***</p>
+<p>示例</p>
+<h3 id="创建前端请求跳转-controller"><a href="#创建前端请求跳转-controller" class="headerlink" title="创建前端请求跳转 controller"></a>创建前端请求跳转 controller</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestController</span> &#123;</span><br><span class="line"></span><br><span class="line">	  <span class="meta">@RequestMapping(&quot;login&quot;)</span></span><br><span class="line">	  <span class="keyword">public</span> String <span class="title function_">login</span><span class="params">()</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;登陆进来啦&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="string">&quot;login&quot;</span>;</span><br><span class="line">	  &#125;</span><br><span class="line"></span><br><span class="line">	  <span class="meta">@RequestMapping(&quot;home&quot;)</span></span><br><span class="line">	  <span class="keyword">public</span> String <span class="title function_">home</span><span class="params">()</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">&quot;home&quot;</span>;</span><br><span class="line">	  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建前端页面"><a href="#创建前端页面" class="headerlink" title="创建前端页面"></a>创建前端页面</h3><p><img src="https://qiniu.yangbuyi.top/yby-img/image-1653486913828.png?imageView2/0/q/75%7Cwatermark/2/text/d3d3LnlhbmdidXlpLnRvcA==/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzA2MDYwNg==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cwatermark/2/text/5p2o5LiN5piT/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzAzMDMwMw==/dissolve/100/gravity/NorthWest/dx/10/dy/10" alt="image-1653486913828"></p>
+<h4 id="login-html"><a href="#login-html" class="headerlink" title="login.html"></a>login.html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    登录地址    action=&quot;/api/login/oauth&quot;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/api/login/oauth&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background: red;size: 25px&quot;</span> <span class="attr">value</span>=<span class="string">&quot;登陆&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="home-html"><a href="#home-html" class="headerlink" title="home.html"></a>home.html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span>登陆成功<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;&#x27;openID :&#x27; + $&#123;map.qqOpenidDTO.openid&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;&#x27;用户名称 :&#x27; + $&#123;map.user.nickname&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        用户头像:</span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;$&#123;map.user.figureurl_qq_1&#125;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;$&#123;map.user.figureurl_qq_1&#125;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;$&#123;map.user.figureurl_qq_2&#125;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        性别:</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;map.user.gender&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;map.user.vip&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;map.user.yellow_vip_level&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;map.user.is_yellow_year_vip&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;map.user.province&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;map.user.city&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--参数列表:--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String ret; //返回码--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String msg; //如果ret&lt;0，会有相应的错误信息提示，返回数据全部用UTF-8编码。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String nickname; //用户在QQ空间的昵称。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String figureurl; //大小为30×30像素的QQ空间头像URL。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String figureurl_1; //大小为50×50像素的QQ空间头像URL。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String figureurl_2; //大小为100×100像素的QQ空间头像URL。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String figureurl_qq_1; //大小为40×40像素的QQ头像URL。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String figureurl_qq_2; //大小为100×100像素的QQ头像URL。需要注意，不是所有的用户都拥有QQ的100x100的头像，但40x40像素则是一定会有。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String gender; //性别。 如果获取不到则默认返回&quot;男&quot;--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private Integer gendertype; // 性别 数字--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String is_yellow_vip; //标识用户是否为黄钻用户（0：不是；1：是）。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String vip; //标识用户是否为黄钻用户（0：不是；1：是）--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String yellow_vip_level; //黄钻等级--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String level; //黄钻等级--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String is_yellow_year_vip; //标识是否为年费黄钻用户（0：不是； 1：是）--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String province; // 省--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--private String city; // 市--&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>***&lt;已自动折叠&gt;***</p>
+<h3 id="启动注意事项"><a href="#启动注意事项" class="headerlink" title="启动注意事项"></a>启动注意事项</h3><p>必须要打包到服务器启动QQ才能回调</p>
+<h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h1><p>方案一:</p>
+<p>点击package 打包<br><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824090640684.png" alt="image-20220824090640684"></p>
+<p><img src="https://qiniu.yangbuyi.top/yby-img/image-1653486934679.png?imageView2/0/q/75%7Cwatermark/2/text/d3d3LnlhbmdidXlpLnRvcA==/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzA2MDYwNg==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cwatermark/2/text/5p2o5LiN5piT/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzAzMDMwMw==/dissolve/100/gravity/NorthWest/dx/10/dy/10" alt="image-1653486934679"></p>
+<p>修改application.yml 中的端口为 80<br><img src="https://qiniu.yangbuyi.top/yby-img/image-1653486947672.png?imageView2/0/q/75%7Cwatermark/2/text/d3d3LnlhbmdidXlpLnRvcA==/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzA2MDYwNg==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cwatermark/2/text/5p2o5LiN5piT/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzAzMDMwMw==/dissolve/100/gravity/NorthWest/dx/10/dy/10" alt="image-1653486947672"><br>运行 Java程序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar qqlogindemo-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+
+<p>启动成功<br><img src="https://qiniu.yangbuyi.top/yby-img/image-1653486997680.png?imageView2/0/q/75%7Cwatermark/2/text/d3d3LnlhbmdidXlpLnRvcA==/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzA2MDYwNg==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cwatermark/2/text/5p2o5LiN5piT/font/5b6u6L2v6ZuF6buR/fontsize/440/fill/IzAzMDMwMw==/dissolve/100/gravity/NorthWest/dx/10/dy/10" alt="image-1653486997680"></p>
+<p>访问 login 页面</p>
+<p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824090626460.png" alt="image-20220824090626460"></p>
+<p>点击登录 》 QQ扫码或者密码登录 》 登录成功 跳转到 home</p>
+<p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824090617568.png" alt="image-20220824090617568"></p>
+<p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20220824085322317.png" alt="image-20220824085322317"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2022/09/01/%E4%BB%8E%E9%9B%B6%E7%8E%A9%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E4%B9%8BQQ%E7%99%BB%E5%BD%95/">http://example.com/2022/09/01/%E4%BB%8E%E9%9B%B6%E7%8E%A9%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E4%B9%8BQQ%E7%99%BB%E5%BD%95/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/09/01/uniAPP%E5%BC%80%E5%8F%91-%E5%85%A8%E6%95%99%E7%A8%8B/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="uniAPP开发 全教程">
+                        
+                        <span class="card-title">uniAPP开发 全教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/01/nacos%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="nacos数据源配置">
+                        
+                        <span class="card-title">nacos数据源配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lilinzhi666/lilinzhi666.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:3427562614@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3427562614" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3427562614" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
