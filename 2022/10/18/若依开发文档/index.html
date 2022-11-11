@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Stream流使用笔记, lilinzhi">
+    <meta name="keywords" content="若依开发文档, lilinzhi">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Stream流使用笔记 | lilinzhi</title>
+    <title>若依开发文档 | lilinzhi</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Stream流使用笔记</h1>
+                    <h1 class="description center-align post-title">若依开发文档</h1>
                 </div>
             </div>
         </div>
@@ -430,13 +430,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Stream%E6%B5%81%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">Stream流使用笔记</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -448,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-10-09
+                    2022-10-18
                 </div>
                 
 
@@ -469,20 +465,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Stream流使用笔记"><a href="#Stream流使用笔记" class="headerlink" title="Stream流使用笔记"></a>Stream流使用笔记</h1><blockquote>
-<p>作者：lilinzhi</p>
-</blockquote>
-<p>guava适合于构造动态List，虽然只是个语法题，但是易用性确实好很多，可以用一个简单语句代替之前用很多语句才能实现的功能，方便表达出程序员的想法。Guava里的很多方法都非常方便，相信基本都是来自于实践中的痛点，对JDK里的方法是个很好的补充。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">       &lt;groupId&gt;com.google.guava&lt;/groupId&gt;</span><br><span class="line">       &lt;artifactId&gt;guava&lt;/artifactId&gt;</span><br><span class="line">       &lt;version&gt;<span class="number">31.0</span><span class="number">.1</span>-jre&lt;/version&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<p>listA与listB的差级</p>
-<p>listB与listA的差级</p>
-<p>listA与listB的交集</p>
-<p>listA与listB的并集（不去重）</p>
-<p>listA与listB的去重并集（不去重）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.google.common.collect.Lists;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lilinzhi</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2022/10/9 14:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        ArrayList&lt;String&gt; listA = Lists.newArrayList(<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>, <span class="string">&quot;王五&quot;</span>);</span><br><span class="line">        ArrayList&lt;String&gt; listB = Lists.newArrayList(<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>, <span class="string">&quot;王五&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;listA = &quot;</span> + listA);</span><br><span class="line">        System.out.println(<span class="string">&quot;listB = &quot;</span> + listB);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// listA和listB的差集（listA - listB）</span></span><br><span class="line">        List&lt;String&gt; collect = listA.stream().filter(item -&gt; !listB.contains(item)).collect(Collectors.toList());</span><br><span class="line">        System.out.println(<span class="string">&quot;listA - listB的差集 = &quot;</span> + collect);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// listA和listB的差集（listB - listA）</span></span><br><span class="line">        List&lt;String&gt; collect1 = listB.stream().filter(item -&gt; !listA.contains(item)).collect(Collectors.toList());</span><br><span class="line">        System.out.println(<span class="string">&quot;listB - listA的差集 = &quot;</span> + collect1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// listA和listB交集</span></span><br><span class="line">        List&lt;String&gt; intersection = listA.stream().filter(listB::contains).collect(Collectors.toList());</span><br><span class="line">        System.out.println(<span class="string">&quot;listA和listB交集 = &quot;</span> + intersection);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// listA和listB并集（不去重）</span></span><br><span class="line">        listA.addAll(listB);</span><br><span class="line">        System.out.println(<span class="string">&quot;listA和listB并集 = &quot;</span> + listA);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// listA和listB并集（去重）</span></span><br><span class="line">        List&lt;String&gt; distinctList = listA.stream().distinct().collect(Collectors.toList());</span><br><span class="line">        System.out.println(<span class="string">&quot;listA和listB去重并集 = &quot;</span> + distinctList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+                
                 
             </div>
             <hr/>
@@ -508,7 +491,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/10/09/Stream%E6%B5%81%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">http://example.com/2022/10/09/Stream%E6%B5%81%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</a>
+                    <a href="http://example.com/2022/10/18/%E8%8B%A5%E4%BE%9D%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/">http://example.com/2022/10/18/%E8%8B%A5%E4%BE%9D%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,11 +528,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Stream%E6%B5%81%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">Stream流使用笔记</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -721,13 +700,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/10/09/%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/">
+                <a href="/2022/11/11/1-Git%E9%9B%B6%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="函数式接口">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="1.Git零基础使用详解">
                         
-                        <span class="card-title">函数式接口</span>
+                        <span class="card-title">1.Git零基础使用详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -738,7 +717,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-11
                         </span>
                         <span class="publish-author">
                             
@@ -747,14 +726,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/">
-                        <span class="chip bg-color">函数式接口</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -766,13 +737,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/07/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B%EF%BC%8C%E6%9C%80%E5%85%A8MybatisPlus%E8%AE%B2%E8%A7%A3/">
+                <a href="/2022/10/15/Stream%E6%B5%81%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="提高生产力，最全MybatisPlus讲解">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Stream流基本操作">
                         
-                        <span class="card-title">提高生产力，最全MybatisPlus讲解</span>
+                        <span class="card-title">Stream流基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -783,7 +754,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-15
                             </span>
                         <span class="publish-author">
                             
@@ -796,8 +767,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B%EF%BC%8C%E6%9C%80%E5%85%A8-MyBatisPlus-%E8%AE%B2%E8%A7%A3%EF%BC%81/">
-                        <span class="chip bg-color">提高生产力，最全 MyBatisPlus 讲解！</span>
+                    <a href="/tags/Stream%E6%B5%81%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                        <span class="chip bg-color">Stream流基本操作</span>
                     </a>
                     
                 </div>
